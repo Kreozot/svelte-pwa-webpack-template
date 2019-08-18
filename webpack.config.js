@@ -53,17 +53,22 @@ module.exports = {
 	plugins: [
 		new CleanWebpackPlugin(),
 		new MiniCssExtractPlugin({
-			filename: '[name].css'
+			filename: '[name].css',
 		}),
 		new HtmlWebpackPlugin({
+			template: './src/index.html',
 			title: 'Progressive Web Application',
-			favicon: 'src/favicon.png'
+			favicon: './src/favicon.png',
+			meta: {
+				viewport: 'width=device-width, initial-scale=1.0',
+			},
 		}),		
 		new WebpackPwaManifest({
 			name: 'My Progressive Web App',
 			short_name: 'MyPWA',
 			description: 'My awesome Progressive Web App!',
 			background_color: '#ffffff',
+			theme_color: '#2196F3',
 			crossorigin: 'use-credentials', //can be null, use-credentials or anonymous
 			icons: [
 				{
@@ -82,5 +87,5 @@ module.exports = {
 			skipWaiting: true,
 		}),
 	],
-	devtool: prod ? false: 'source-map'
+	devtool: prod ? false : 'source-map'
 };
