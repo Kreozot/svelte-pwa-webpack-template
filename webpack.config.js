@@ -1,4 +1,5 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 const mode = process.env.NODE_ENV || 'development';
@@ -49,7 +50,11 @@ module.exports = {
 	plugins: [
 		new MiniCssExtractPlugin({
 			filename: '[name].css'
-		})
+		}),
+		new HtmlWebpackPlugin({
+			title: 'Progressive Web Application',
+			favicon: 'src/favicon.png'
+		}),
 	],
 	devtool: prod ? false: 'source-map'
 };
