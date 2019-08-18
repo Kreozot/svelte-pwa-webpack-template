@@ -74,12 +74,12 @@ module.exports = {
 			icons: [
 				{
 					src: path.resolve('src/apple-touch-icon.png'),
-					sizes: [120, 180, 167, 152],
+					sizes: [120, 180, 167, 152, 192],
 					ios: true,
 				},
 				{
 					src: path.resolve('src/favicon.png'),
-					size: [32, 64, 96, 128]
+					size: [32, 64, 96, 128, 192, 512]
 				}
 			]
 		}),
