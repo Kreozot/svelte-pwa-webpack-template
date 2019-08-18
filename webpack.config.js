@@ -70,14 +70,16 @@ module.exports = {
 			background_color: '#ffffff',
 			theme_color: '#2196F3',
 			crossorigin: 'use-credentials', //can be null, use-credentials or anonymous
+			ios: true,
 			icons: [
 				{
-					src: path.resolve('src/favicon.png'),
-					sizes: [96, 128, 192, 256, 384, 512] // multiple sizes
+					src: path.resolve('src/apple-touch-icon.png'),
+					sizes: [120, 180, 167, 152],
+					ios: true,
 				},
 				{
 					src: path.resolve('src/favicon.png'),
-					size: '1024x1024' // you can also use the specifications pattern
+					size: [32, 64, 96, 128]
 				}
 			]
 		}),
