@@ -1,4 +1,5 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WorkboxPlugin = require('workbox-webpack-plugin');
 const path = require('path');
@@ -49,6 +50,7 @@ module.exports = {
 	},
 	mode,
 	plugins: [
+		new CleanWebpackPlugin(),
 		new MiniCssExtractPlugin({
 			filename: '[name].css'
 		}),
